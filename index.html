@@ -121,18 +121,9 @@ footer{text-align:center;padding:40px;border-top:1px solid rgba(255,255,255,.2)}
 function goForm(){
 document.getElementById('loader').style.display='flex';
 setTimeout(()=>{
-location.href='https://onlinetiketdigital.github.io/FORM-SOEKARNO/';
+location.href='https://onlinetiketdigital.github.io/FROM-SOEKARNO/';
 },2500);
 }
-const target=new Date('2026-07-04T00:00:00').getTime();
-setInterval(()=>{
-const n=new Date().getTime();
-const x=target-n;
-document.getElementById('d').innerText=Math.floor(x/86400000);
-document.getElementById('h').innerText=Math.floor((x%86400000)/3600000);
-document.getElementById('m').innerText=Math.floor((x%3600000)/60000);
-document.getElementById('s').innerText=Math.floor((x%60000)/1000);
-},1000);
 </script>
 
 </body>
