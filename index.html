@@ -6,11 +6,15 @@
 
 <title>10K Central Celebes Soekarno Run 2026</title>
 
-<meta name="description" content="10K Central Celebes Soekarno Run 2026 - Berlari Di Atas Kaki Sendiri">
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
+
+:root{
+--red:#d6002a;
+--red2:#b40022;
+--white:#ffffff;
+}
 
 *{
 margin:0;
@@ -19,188 +23,142 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
-html{
-scroll-behavior:smooth;
-}
-
 body{
-background:#d5002f;
-color:#fff;
+background:
+linear-gradient(
+180deg,
+#d6002a 0%,
+#c00024 50%,
+#8a0019 100%
+);
+color:white;
 overflow-x:hidden;
 }
 
-body::before{
-content:"";
-position:fixed;
-inset:0;
-background:
-radial-gradient(circle at top,#ff4d6d55,transparent 40%),
-radial-gradient(circle at bottom,#8b001d66,transparent 45%);
-z-index:-1;
-}
+/* NAVBAR */
 
 nav{
 position:fixed;
 top:0;
 left:0;
 width:100%;
-padding:18px 7%;
+padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(213,0,47,.92);
+background:rgba(0,0,0,.15);
 backdrop-filter:blur(15px);
 z-index:999;
-border-bottom:1px solid rgba(255,255,255,.15);
 }
 
 .logo{
-font-size:1.1rem;
-font-weight:900;
-letter-spacing:1px;
+font-size:1.2rem;
+font-weight:800;
 }
 
 .nav-btn{
-text-decoration:none;
-background:#fff;
-color:#d5002f;
 padding:12px 24px;
 border-radius:50px;
+background:white;
+color:var(--red);
+text-decoration:none;
 font-weight:800;
-transition:.3s;
 }
 
-.nav-btn:hover{
-transform:translateY(-2px);
-}
+/* HERO */
 
 .hero{
 min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
-gap:60px;
-padding:130px 8% 80px;
-flex-wrap:wrap;
+text-align:center;
+padding:120px 20px;
 }
 
-.hero-left{
-flex:1;
-min-width:320px;
+.hero-content{
+max-width:900px;
 }
 
 .badge{
 display:inline-block;
 padding:10px 18px;
-border-radius:50px;
+border-radius:999px;
 background:rgba(255,255,255,.15);
-border:1px solid rgba(255,255,255,.2);
-margin-bottom:20px;
+margin-bottom:25px;
 font-weight:600;
 }
 
 .hero h1{
 font-size:clamp(3rem,8vw,6rem);
-font-weight:900;
 line-height:1;
+font-weight:900;
 margin-bottom:20px;
 }
 
 .hero p{
-font-size:1.1rem;
-line-height:1.8;
+font-size:1.2rem;
 margin-bottom:30px;
-max-width:700px;
 }
 
-.hero-buttons{
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-}
-
-.btn{
-padding:16px 30px;
-border-radius:50px;
+.hero-btn{
+display:inline-block;
+padding:16px 35px;
+background:white;
+color:var(--red);
 font-weight:800;
 text-decoration:none;
-transition:.3s;
+border-radius:60px;
 }
 
-.btn-primary{
-background:#fff;
-color:#d5002f;
-}
+/* COUNTDOWN */
 
-.btn-secondary{
-border:2px solid #fff;
-color:#fff;
-}
-
-.btn:hover{
-transform:translateY(-3px);
-}
-
-.poster{
-max-width:500px;
-border-radius:25px;
-overflow:hidden;
-box-shadow:
-0 0 40px rgba(255,255,255,.25),
-0 0 80px rgba(255,255,255,.15);
-}
-
-.poster img{
-width:100%;
-display:block;
+.countdown{
+padding:80px 8%;
+text-align:center;
 }
 
 .section-title{
-text-align:center;
-font-size:3rem;
+font-size:2.5rem;
 font-weight:900;
 margin-bottom:40px;
 }
 
-.countdown{
-padding:80px 8%;
-}
-
 .timer{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
 gap:20px;
 }
 
 .time-box{
 background:rgba(255,255,255,.12);
-backdrop-filter:blur(10px);
 padding:30px;
 border-radius:25px;
-text-align:center;
-border:1px solid rgba(255,255,255,.15);
+backdrop-filter:blur(10px);
 }
 
 .time-box h2{
 font-size:3rem;
-font-weight:900;
 }
 
-.info{
+/* HIGHLIGHT */
+
+.highlight{
 padding:80px 8%;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
 }
 
 .card{
 background:rgba(255,255,255,.12);
-padding:30px;
-border-radius:25px;
-border:1px solid rgba(255,255,255,.15);
+padding:35px;
+border-radius:30px;
+text-align:center;
+backdrop-filter:blur(10px);
 transition:.3s;
 }
 
@@ -208,104 +166,64 @@ transition:.3s;
 transform:translateY(-8px);
 }
 
-.card h3{
-margin-bottom:15px;
-font-size:1.3rem;
-}
-
-.prize{
-padding:80px 8%;
-}
-
-.prize-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:25px;
-}
-
-.prize-card{
-background:rgba(255,255,255,.12);
-padding:35px;
-border-radius:25px;
-border:1px solid rgba(255,255,255,.15);
-}
-
-.prize-card h3{
-margin-bottom:20px;
-font-size:1.4rem;
-}
-
-.prize-card ul{
-list-style:none;
-}
-
-.prize-card li{
-padding:10px 0;
-border-bottom:1px solid rgba(255,255,255,.12);
-}
-
-.registration{
-padding:100px 8%;
-}
-
-.register-box{
-background:#fff;
-color:#d5002f;
-padding:60px;
-border-radius:35px;
-text-align:center;
-}
-
-.register-box h2{
+.icon{
 font-size:3rem;
 margin-bottom:15px;
 }
 
-.register-box p{
-margin-bottom:30px;
-font-size:1.1rem;
+/* KATEGORI */
+
+.category{
+padding:80px 8%;
 }
 
-.register-btn{
-display:inline-block;
-padding:18px 40px;
-border-radius:50px;
-background:#d5002f;
-color:#fff;
-text-decoration:none;
-font-weight:900;
+.ticket-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
 }
+
+.ticket{
+background:white;
+color:#111;
+padding:40px;
+border-radius:35px;
+text-align:center;
+}
+
+.ticket h3{
+font-size:1.6rem;
+margin-bottom:15px;
+color:var(--red);
+}
+
+.ticket-price{
+font-size:2.3rem;
+font-weight:900;
+margin-bottom:15px;
+}
+
+.ticket-btn{
+display:inline-block;
+padding:14px 30px;
+background:var(--red);
+color:white;
+border-radius:50px;
+text-decoration:none;
+font-weight:700;
+}
+
+/* FOOTER */
 
 footer{
-padding:50px 8%;
+padding:50px 20px;
 text-align:center;
-border-top:1px solid rgba(255,255,255,.15);
-}
-
-footer h3{
-margin-bottom:10px;
-}
-
-.social{
-margin-top:15px;
 }
 
 @media(max-width:768px){
 
-.hero{
-text-align:center;
-}
-
-.hero-buttons{
-justify-content:center;
-}
-
-.register-box{
-padding:40px 25px;
-}
-
-.register-box h2{
-font-size:2rem;
+.hero h1{
+font-size:3rem;
 }
 
 .section-title{
@@ -321,19 +239,17 @@ font-size:2rem;
 <nav>
 <div class="logo">SOEKARNO RUN 2026</div>
 
-<a href="https://onlinetiketdigital.github.io/FROM-SOEKARNO/"
-target="_blank"
-class="nav-btn">
-DAFTAR SEKARANG
+<a href="#kategori" class="nav-btn">
+DAFTAR
 </a>
 </nav>
 
 <section class="hero">
 
-<div class="hero-left">
+<div class="hero-content">
 
 <div class="badge">
-🏃 CENTRAL CELEBES SOEKARNO RUN 2026
+🏃 EVENT LARI SULAWESI TENGAH
 </div>
 
 <h1>
@@ -342,31 +258,12 @@ SOEKARNO RUN
 </h1>
 
 <p>
-Berlari Di Atas Kaki Sendiri.
-Ikuti event lari terbesar Sulawesi Tengah dan jadilah bagian dari pengalaman berlari yang penuh semangat, sportivitas, dan kebersamaan.
+04 JULI 2026 • PALU, SULAWESI TENGAH
 </p>
 
-<div class="hero-buttons">
-
-<a href="https://onlinetiketdigital.github.io/FROM-SOEKARNO/"
-target="_blank"
-class="btn btn-primary">
+<a href="#kategori" class="hero-btn">
 DAFTAR SEKARANG
 </a>
-
-<a href="#info" class="btn btn-secondary">
-LIHAT DETAIL
-</a>
-
-</div>
-
-</div>
-
-<div class="hero-right">
-
-<div class="poster">
-<img src="poster.png" alt="Soekarno Run">
-</div>
 
 </div>
 
@@ -404,115 +301,85 @@ COUNTDOWN EVENT
 
 </section>
 
-<section id="info" class="info">
+<section class="highlight">
 
-<h2 class="section-title">
-INFORMASI EVENT
+<h2 class="section-title" align="center">
+HIGHLIGHT EVENT
 </h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>💰 Biaya Pendaftaran</h3>
-<p>
-Individual : Rp100.000<br><br>
-Kolektif 5 Orang : Rp430.000
-</p>
+<div class="icon">🏅</div>
+<h3>Finisher Medal</h3>
+<p>Medali eksklusif untuk seluruh finisher.</p>
 </div>
 
 <div class="card">
-<h3>🎁 Fasilitas Peserta</h3>
-<p>
-Jersey Event<br>
-BIB Number<br>
-Medali Finisher
-</p>
+<div class="icon">👕</div>
+<h3>Official Jersey</h3>
+<p>Jersey resmi event berkualitas premium.</p>
 </div>
 
 <div class="card">
-<h3>📅 Tanggal Event</h3>
-<p>04 Juli 2026</p>
+<div class="icon">🏆</div>
+<h3>Total Hadiah</h3>
+<p>Puluhan juta rupiah untuk para juara.</p>
 </div>
 
 <div class="card">
-<h3>📍 Lokasi</h3>
-<p>Venue To Be Announced</p>
-</div>
-
-<div class="card">
-<h3>🏃 Kategori</h3>
-<p>10 Kilometer</p>
-</div>
-
-<div class="card">
-<h3>📱 Instagram</h3>
-<p>@soekarnorun_sulteng</p>
+<div class="icon">🎁</div>
+<h3>Doorprize</h3>
+<p>Hadiah menarik untuk peserta beruntung.</p>
 </div>
 
 </div>
 
 </section>
 
-<section class="prize">
+<section class="category" id="kategori">
 
-<h2 class="section-title">
-HADIAH PODIUM
+<h2 class="section-title" align="center">
+KATEGORI PENDAFTARAN
 </h2>
 
-<div class="prize-grid">
+<div class="ticket-grid">
 
-<div class="prize-card">
+<div class="ticket">
 
-<h3>KATEGORI PUTRA</h3>
+<h3>INDIVIDUAL</h3>
 
-<ul>
-<li>🥇 Juara 1 - Rp2.500.000</li>
-<li>🥈 Juara 2 - Rp1.750.000</li>
-<li>🥉 Juara 3 - Rp1.500.000</li>
-<li>🏅 Juara 4 - Rp1.000.000</li>
-<li>🏅 Juara 5 - Rp750.000</li>
-<li>🏅 Juara 6 - Rp500.000</li>
-</ul>
-
+<div class="ticket-price">
+Rp100.000
 </div>
 
-<div class="prize-card">
+<p>1 Peserta</p>
 
-<h3>KATEGORI PUTRI</h3>
+<br>
 
-<ul>
-<li>🥇 Juara 1 - Rp2.500.000</li>
-<li>🥈 Juara 2 - Rp1.750.000</li>
-<li>🥉 Juara 3 - Rp1.500.000</li>
-<li>🏅 Juara 4 - Rp1.000.000</li>
-<li>🏅 Juara 5 - Rp750.000</li>
-<li>🏅 Juara 6 - Rp500.000</li>
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="registration">
-
-<div class="register-box">
-
-<h2>
-SIAP MENANTANG DIRI?
-</h2>
-
-<p>
-Daftarkan dirimu sekarang dan jadilah bagian dari
-10K Central Celebes Soekarno Run 2026.
-</p>
-
-<a href="https://onlinetiketdigital.github.io/FROM-SOEKARNO/"
-target="_blank"
-class="register-btn">
-DAFTAR SEKARANG
+<a href="#" class="ticket-btn">
+PILIH
 </a>
+
+</div>
+
+<div class="ticket">
+
+<h3>KOLEKTIF</h3>
+
+<div class="ticket-price">
+Rp430.000
+</div>
+
+<p>5 Peserta</p>
+
+<br>
+
+<a href="#" class="ticket-btn">
+PILIH
+</a>
+
+</div>
 
 </div>
 
@@ -520,34 +387,35 @@ DAFTAR SEKARANG
 
 <footer>
 
-<h3>SOEKARNO RUN 2026</h3>
+<h2>SOEKARNO RUN 2026</h2>
 
-<p>Berlari Di Atas Kaki Sendiri</p>
-
-<div class="social">
-Instagram : @soekarnorun_sulteng
-</div>
+<p>
+Berlari Di Atas Kaki Sendiri
+</p>
 
 </footer>
 
 <script>
 
-const targetDate = new Date("2026-07-04T00:00:00").getTime();
+const targetDate = new Date("July 4, 2026 00:00:00").getTime();
 
-setInterval(function(){
+setInterval(() => {
 
 const now = new Date().getTime();
+
 const distance = targetDate - now;
 
-const days = Math.floor(distance / (1000*60*60*24));
-const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
-const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
-const seconds = Math.floor((distance % (1000*60)) / 1000);
+document.getElementById("days").innerHTML =
+Math.floor(distance / (1000*60*60*24));
 
-document.getElementById("days").innerHTML = days;
-document.getElementById("hours").innerHTML = hours;
-document.getElementById("minutes").innerHTML = minutes;
-document.getElementById("seconds").innerHTML = seconds;
+document.getElementById("hours").innerHTML =
+Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+document.getElementById("minutes").innerHTML =
+Math.floor((distance%(1000*60*60))/(1000*60));
+
+document.getElementById("seconds").innerHTML =
+Math.floor((distance%(1000*60))/1000);
 
 },1000);
 
